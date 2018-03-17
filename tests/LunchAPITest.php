@@ -11,7 +11,11 @@ class LunchAPITest extends TestCase
 
     public function testLunchAPI()
     {
-        $results = $this->get('/lunch');
+        $this->json('GET', '/lunch')->seeJson(
+            [
+                'title' => 'Ham and Cheese Toastie'
+            ]
+        );
 
     }
 
