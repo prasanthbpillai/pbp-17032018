@@ -8,6 +8,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Service\RecipeService;
+
 /**
  * Class LunchController
  * Controller to deal with all the api request to the lunch API end point
@@ -21,8 +23,10 @@ class LunchController extends Controller
      * Function to fetch the recipes based on the request received
      *
      */
-    public function listAll()
+    public function listAll(RecipeService $recipeService)
     {
-        return response()->json(['title' => 'Ham and Cheese Toastie']);
+        $recipes = $recipeService->getRecipes();
+
+        return response()->json($recipes);
     }
 }
