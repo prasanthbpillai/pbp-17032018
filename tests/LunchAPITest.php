@@ -21,11 +21,21 @@ class LunchAPITest extends TestCase
 
     public function testLunchAPIWithPastUsedDateIngredient()
     {
-
+        // test based on the used by date is over
+        $this->json('GET', '/lunch')->seeJson(
+            [
+                'recipes' => ['Fry-up', 'Hotdog', 'Ham and Cheese Toastie']
+            ]
+        );
     }
 
     public function testLunchAPIWithPathBestBeforeIngredient()
     {
-
+        // test based on the best before data
+        $this->json('GET', '/lunch')->seeJson(
+            [
+                'recipes' => ['Fry-up', 'Hotdog', 'Ham and Cheese Toastie']
+            ]
+        );
     }
 }
