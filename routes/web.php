@@ -18,5 +18,5 @@ $app->get('/', function () use ($app) {
 // route for the API
 $app->get('lunch', [
    'as'     => 'lunch.list',
-    'uses'  => 'LunchController@list'
+    'uses'  => 'LunchController@listall'
 ]);

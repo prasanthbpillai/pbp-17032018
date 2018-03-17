@@ -23,6 +23,6 @@ class LunchController extends Controller
      */
     public function listAll()
     {
-
+        return response()->json(['title' => 'Ham and Cheese Toastie']);
     }
 }
