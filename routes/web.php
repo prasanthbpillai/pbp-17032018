@@ -14,3 +14,9 @@
 $app->get('/', function () use ($app) {
     return $app->version();
 });
+
+// route for the API
+$app->get('lunch', [
+   'as'     => 'lunch.list',
+    'uses'  => 'LunchController@list'
+]);
