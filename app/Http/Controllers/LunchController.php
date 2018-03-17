@@ -12,6 +12,7 @@ namespace App\Http\Controllers;
  * Class LunchController
  * Controller to deal with all the api request to the lunch API end point
  * @package App\Http\Controllers
+ * @author Prasanth Pillai  <prasanthbpillai@gmail.com>
  *
  */
 class LunchController extends Controller
